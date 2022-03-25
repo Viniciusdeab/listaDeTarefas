@@ -21,6 +21,7 @@ body{
     padding: 30px 40px;
     width: 35%;
     min-width: 500px;
+    border-radius: 10px;
 }
 
 .new-task-container{
