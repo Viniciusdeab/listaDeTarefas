@@ -25,7 +25,7 @@ const handleAddTask = () => {
     deleteItem.classList.add("fa-solid");
     deleteItem.classList.add("fa-trash-can");
 
-    deleteItem.addEventListener("click", () => handleDeleteClick());
+    deleteItem.addEventListener("click", () => handleDeleteClick(taskItemContainer, taskContent));
 
     taskItemContainer.appendChild(taskContent);
     taskItemContainer.appendChild(deleteItem);
@@ -39,10 +39,23 @@ const handleClick = (taskContent) => {
     const tasks = tasksContainer.childNodes;
 
     for(const task of tasks){
-        if(task.firstChild.isSameNode(taskContent)){
+        const currentTaskIsBeingCliked = task.firstChild.isSameNode(taskContent);
+        if(currentTaskIsBeingCliked){
             task.firstChild.classList.toggle("completed");
         }
     }
+}
+
+const handleDeleteClick = (taskItemContainer, taskContent) => {
+    const tasks = tasksContainer.childNodes;
+
+    for(const task of tasks){
+        const currentTaskIsBeingCliked = task.firstChild.isSameNode(taskContent);
+        if(currentTaskIsBeingCliked){
+            taskItemContainer.remove();
+        }
+    }
+
 }
 
 const handleInputChange = () => {
