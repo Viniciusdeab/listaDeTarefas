@@ -33,6 +33,7 @@ const handleAddTask = () => {
     tasksContainer.appendChild(taskItemContainer);
 
     inputElement.value = " ";
+
 };
 
 const handleClick = (taskContent) => {
@@ -44,6 +45,7 @@ const handleClick = (taskContent) => {
             task.firstChild.classList.toggle("completed");
         }
     }
+    
 }
 
 const handleDeleteClick = (taskItemContainer, taskContent) => {
@@ -55,7 +57,7 @@ const handleDeleteClick = (taskItemContainer, taskContent) => {
             taskItemContainer.remove();
         }
     }
-
+   
 }
 
 const handleInputChange = () => {
@@ -65,6 +67,7 @@ const handleInputChange = () => {
         return inputElement.classList.remove("error");
     }
 };
+
 
 addTaskButton.addEventListener("click", () => handleAddTask());
 
