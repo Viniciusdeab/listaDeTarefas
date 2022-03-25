@@ -73,6 +73,7 @@ body{
     align-items: center;
     margin-bottom: 6px;
     margin-top:  6px;
+    cursor: pointer;
 }
 
 .task-item i {
@@ -81,6 +82,7 @@ color: #FFF;
 padding: 12px;
 border-radius: 5px;
 }
+
 
 /* Utilities */
 
@@ -92,3 +94,6 @@ border-radius: 5px;
     color: red;
 } 
 
+.completed{
+    text-decoration: line-through;
+}
